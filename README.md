@@ -37,4 +37,4 @@ By the end of this course, you can:
 ## 📥 Getting Started
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/kopil-deb-roy-kabbo/Python-journey-.git
