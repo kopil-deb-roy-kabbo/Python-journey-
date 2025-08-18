@@ -1,46 +1,52 @@
-
 import random
 
-print(" Welcome to the Guessing Game!")
-print("Select Difficulty Level:")
-print("1. Easy   (1–20)")
-print("2. Medium (1–50)")
-print("3. Hard   (1–100)")
-
-choice = int(input("Enter choice (1/2/3): "))
-
-if choice == 1:
-    low, high = 1, 20
-elif choice == 2:
-    low, high = 1, 50
-elif choice == 3:
-    low, high = 1, 100
-else:
-    print(" Invalid choice! Defaulting to Easy.")
-    low, high = 1, 20
-
-secret = random.randint(low, high)
-tries = 0
-max_tries = 5
-
-print(f"\nGuess the number between {low} and {high}. You have {max_tries} tries.\n")
-
-while tries < max_tries:
-    guess = int(input("Your guess: "))
-    tries += 1
-
-    if guess == secret:
-        print(f" Correct! You guessed it in {tries} tries.")
-        break
-    elif abs(secret - guess) <= 10:
-        print(" Too close!")
+print("Welcome to the number game🫂")
+print("You have 5 chances only")
+print("Here you can select your difficulty.")
+print("For 1-20 words select  :1\nFor 1-50 words select  :2\nFor 1-100 words select :3")
+level=int(input("\nSelect your difficulty :"))
+if(level==1):
+    print("\nYou have selected easy level.")
+    x=random.randint(1,21)
+    for i in range(1,5):
+        k=int(input("\nGuess a number :"))
+        if(x==k):
+            print(f"You are great.You choosed the correct number.It is {x}")
+            break
+        elif((abs(x-k))<6):
+            print("You are very close!")
+        else:
+            print("You are too far bro!")
     else:
-        print(" Too far!")
-
-if guess != secret:
-    print(f" You lost! The number was {secret}.")
-
-
-
-
-
+        print(f"Nice try bro.The number was {x}")    
+elif(level==2):
+    print("\nYou have selected medium level.")
+    x=random.randint(1,51)
+    for i in range(1,5):
+        
+        k=int(input("\nGuess a number :"))
+        if(x==k):
+            print(f"You are great.You choosed the correct number.It is {x}")
+            break
+        elif((abs(x-k))<11):
+            print("You are very close!")
+        else:
+            print("You are too far bro!")   
+    else:
+        print(f"Nice try bro.The number was {x}")              
+elif(level==3):
+    print("\nYou have selected difficult level.")
+    x=random.randint(1,101)
+    for i in range(1,5):
+       k=int(input("\nGuess a number :"))
+       if(x==k):
+            print(f"You are great.You choosed the correct number.It is {x}")
+            break
+       elif((abs(x-k))<11):
+            print("You are very close!")
+       else:
+            print("You are too far bro!") 
+    else:
+        print(f"Nice try bro.The number was {x}")
+else:
+    print("\nInvalid choice")            
